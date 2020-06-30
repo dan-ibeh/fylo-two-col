@@ -141,7 +141,7 @@ margin-bottom: 15px;
   margin-right: 1.5rem;
 }
 .col-md-3:not(:first-child) h2, .col-md-3 a:first-child {
-  margin-left: 10rem;
+  margin-left: 5rem;
 }
 i {
   border: 1px solid #FFFFFF;
