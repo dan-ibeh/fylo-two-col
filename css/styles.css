@@ -1,6 +1,7 @@
 body {
   align-items: center;
-  font-family: Raleway;
+  font-family:'Open Sans', sans-serif;
+  padding:0;
 }
 .colored-section {
   color: #FFFFFF;
@@ -11,13 +12,14 @@ body {
   padding: 5% 5% 10%;
 }
 h1 {
+  font-family:'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 2.1rem;
-  line-height: 3rem;
+  font-size: 200%;
+  line-height: 2.5rem;
 }
 h2 {
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1.2em;
   line-height: 1.5rem;
 
 }
@@ -33,13 +35,19 @@ p {
   font-weight: 400;
   font-size: 0.5rem;
 }
+#features .row, #team .row {
+  flex-direction: row-reverse;
+}
 /* Section 1 */
 /* Navbar */
 .navbar{
   padding-bottom: 5%;
 }
+.navbar-brand img{
+  width: 7.5rem;
+}
 .nav-item {
-  padding: 0 1.2rem;
+  padding: 0 0.5rem;
 }
 
 /* Features */
@@ -52,6 +60,7 @@ p {
   margin: 15px 15px 0 0;
 }
 .btn {
+  font-family:'Raleway', sans-serif;
   padding: 2% 10%;
 }
 .features-img {
@@ -62,11 +71,15 @@ p {
   background-color: hsl(240, 75%, 98%);
 }
 .bg-curve-desktop-img {
-  width:100%;
+  width: 100%;
+}
+.bg-curve-mobile-img {
+  display: none;
 }
 span {
   border-bottom: 1px solid hsl(170, 45%, 43%);
   color: hsl(170, 45%, 43%);
+  display: inline;
   font-family: Raleway;
   font-weight: 400;
   padding-bottom: 5px;
@@ -125,7 +138,10 @@ margin-bottom: 15px;
   line-height: 3rem;
 }
 .icon-phone, .icon-email {
-  margin-right: 2rem;
+  margin-right: 1.5rem;
+}
+.col-md-3:not(:first-child) h2, .col-md-3:not(:first-child) i:first-child {
+  margin-left: 10rem;
 }
 i {
   border: 1px solid #FFFFFF;
@@ -134,14 +150,62 @@ i {
 }
 
 
+@media (max-width: 1128px) {
+  .navbar-brand img{
+    width: 20vw;
+  }
+  .nav-item {
+    font-size: 2vw;
+  }
+  .bg-curve-desktop-img {
+    display: none;
+  }
+  .bg-curve-mobile-img {
+    display: initial;
+    width: 100%;
+  }
+  #features .col-md-6 {
+    text-align: center;
+  }
+  #features .btn, .email {
+    width: 100%;
+  }
+  #cta .btn,#cta .email {
+    width: 80%;
+    margin-right: 0;
+  }
+  .email {
+    margin-bottom: 15px;
+  }
+  #cta {
+    text-align: center;
+  }
+  #team h1, #cta h1 {
+    font-size: 5vw;
+  }
+  .testimonial {
+    margin: 5% auto 0;
+    width: 80%;
+  }
+  .logo-white, .col-md-3 {
+    margin: 5%;
+  }
+  .col-md-3:last-child {
+    text-align: center;
+  }
+  .col-md-3:not(:first-child) h2, .col-md-3:not(:first-child) i:first-child {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  span {
+    margin-left: 25%;
+  }
+}
+
 @media (max-width: 576px) {
-  body {
-    margin: 0;
-  }
-  .colored-section, .uncolored-setion {
-    width:auto;
-  }
-  .ml-auto {
-    margin-left: auto;
+  .nav-item {
+    font-size: 3vw;
   }
 }
