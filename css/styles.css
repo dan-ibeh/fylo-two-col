@@ -196,7 +196,7 @@ i {
   .col-md-3:last-child {
     text-align: center;
   }
-  .col-md-3:not(:first-child) h2, .col-md-3:not(:first-child) i:first-child {
+  .col-md-3:not(:first-child) h2, .col-md-3 a:first-child {
     margin-left: 0;
   }
 }
